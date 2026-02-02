@@ -8,3 +8,5 @@ export const getAddress = (address: any) => {
     .filter(Boolean)
     .join("\n"); // join each part with a newline
 };
+
+export const HEADER_HEIGHT = 250;
