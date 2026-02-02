@@ -1,3 +1,4 @@
+import { isValidRestaurant } from "@/utils/isValidRestaurant";
 import { useEffect, useState } from "react";
 import { ApiResponse, Restaurant } from "../types/restaurant";
 
@@ -16,7 +17,12 @@ export function useRestaurants() {
         if (!response.ok) throw new Error("Failed to fetch restaurants");
 
         const json: ApiResponse = await response.json();
-        setRestaurants(json.data.restaurant.items);
+
+        // Filter out restaurants with missing required fields before exposing them to the UI
+        const validRestaurants =
+          json.data.restaurant.items.filter(isValidRestaurant);
+
+        setRestaurants(validRestaurants);
       } catch (err: unknown) {
         setError(err instanceof Error ? err.message : "Unknown error");
       } finally {

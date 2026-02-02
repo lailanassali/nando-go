@@ -3,7 +3,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import { WebView } from "react-native-webview";
 
-export default function NandosWebView() {
+export default function NandosWebViewScreen() {
   const params = useLocalSearchParams();
   const url = params.url as string;
   const title = params.title as string;

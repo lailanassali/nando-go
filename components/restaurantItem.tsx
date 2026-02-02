@@ -1,5 +1,5 @@
-import { getAddress } from "@/constants";
 import { Restaurant } from "@/types/restaurant";
+import { getAddress } from "@/utils/getAddress";
 import * as Haptics from "expo-haptics";
 import { useRouter } from "expo-router";
 import { useRef } from "react";
@@ -17,7 +17,7 @@ export default function RestaurantItem({ restaurant }: Props) {
   const handlePress = () => {
     Haptics.selectionAsync();
     router.push({
-      pathname: "/screens/nandosWebView",
+      pathname: "/screens/nandosWebViewScreen",
       params: {
         url: restaurant.url,
         title: restaurant.name,

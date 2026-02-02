@@ -21,7 +21,15 @@ export default function HomeScreen() {
           <Text style={styles.appVersion}>App version: {APP_VERSION}</Text>
         </View>
       </View>
-      <RestaurantsList restaurants={restaurants} />
+      {restaurants && restaurants.length > 0 ? (
+        <RestaurantsList restaurants={restaurants} />
+      ) : (
+        <View style={styles.emptyContainer}>
+          <Text style={styles.emptyText}>
+            Sorry, we couldn’t load any restaurant locations at the moment.
+          </Text>
+        </View>
+      )}
     </View>
   );
 }
@@ -54,5 +62,17 @@ const styles = StyleSheet.create({
   appVersion: {
     color: "white",
     fontWeight: 600,
+  },
+  emptyContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 20,
+  },
+  emptyText: {
+    fontSize: 18,
+    textAlign: "center",
+    color: "#8B0000",
+    fontWeight: "700",
   },
 });

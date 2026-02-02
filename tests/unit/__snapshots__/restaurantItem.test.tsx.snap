@@ -1,0 +1,265 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given I am on the restaurant screen matches snapshot 1`] = `
+<View
+  collapsable={false}
+  style={
+    {
+      "transform": [
+        {
+          "scale": 1,
+        },
+      ],
+    }
+  }
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {
+          "paddingVertical": 5,
+        },
+        false,
+      ]
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        {
+          "backgroundColor": "white",
+          "borderRadius": 12,
+          "margin": 5,
+          "marginHorizontal": 20,
+          "shadowColor": "#000",
+          "shadowOffset": {
+            "height": 0,
+            "width": 0,
+          },
+          "shadowOpacity": 0,
+          "shadowRadius": 0,
+        }
+      }
+      testID="card-container-outer-layer"
+    >
+      <View
+        collapsable={false}
+        style={
+          {
+            "backgroundColor": "white",
+            "borderRadius": 12,
+            "flex": undefined,
+            "padding": 10,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 0,
+              "width": 0,
+            },
+            "shadowOpacity": 0,
+            "shadowRadius": 0,
+          }
+        }
+        testID="card-container"
+      >
+        <View
+          style={
+            [
+              {
+                "flexShrink": 1,
+              },
+              undefined,
+            ]
+          }
+          testID="card"
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": true,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            borderRadiusStyles={{}}
+            collapsable={false}
+            focusable={true}
+            index={0}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            siblings={[]}
+            style={
+              [
+                false,
+                [
+                  {
+                    "paddingRight": 24,
+                    "paddingVertical": 8,
+                  },
+                  undefined,
+                ],
+              ]
+            }
+            total={1}
+          >
+            <View
+              style={
+                [
+                  {
+                    "flexDirection": "row",
+                    "marginVertical": 6,
+                    "width": "100%",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              <Image
+                accessibilityIgnoresInvertColors={true}
+                source={
+                  {
+                    "testUri": "../../../assets/images/nandos-logo.png",
+                  }
+                }
+                style={
+                  [
+                    {
+                      "alignSelf": "center",
+                      "resizeMode": "contain",
+                    },
+                    {
+                      "height": 56,
+                      "width": 56,
+                    },
+                  ]
+                }
+                testID="list-image"
+              />
+              <View
+                style={
+                  [
+                    {
+                      "paddingLeft": 16,
+                    },
+                    {
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
+                }
+                testID="undefined-content"
+              >
+                <Text
+                  numberOfLines={1}
+                  selectable={false}
+                  style={
+                    [
+                      {
+                        "textAlign": "left",
+                      },
+                      {
+                        "color": "rgba(28, 27, 31, 1)",
+                        "fontFamily": "System",
+                        "fontWeight": "400",
+                        "letterSpacing": 0,
+                      },
+                      {
+                        "writingDirection": "ltr",
+                      },
+                      [
+                        {
+                          "fontSize": 16,
+                        },
+                        {
+                          "color": "rgba(28, 27, 31, 1)",
+                        },
+                        {
+                          "color": "#8B0000",
+                          "fontWeight": 500,
+                        },
+                      ],
+                    ]
+                  }
+                >
+                  Nandos Soho
+                </Text>
+                <Text
+                  style={
+                    [
+                      {
+                        "textAlign": "left",
+                      },
+                      {
+                        "color": "rgba(28, 27, 31, 1)",
+                        "fontFamily": "System",
+                        "fontWeight": "400",
+                        "letterSpacing": 0,
+                      },
+                      {
+                        "writingDirection": "ltr",
+                      },
+                      undefined,
+                    ]
+                  }
+                >
+                  London
+123 Test St
+W1
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
