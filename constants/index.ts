@@ -10,3 +10,4 @@ export const getAddress = (address: any) => {
 };
 
 export const HEADER_HEIGHT = 250;
+export const ITEM_HEIGHT = 140;

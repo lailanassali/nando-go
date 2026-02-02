@@ -1,5 +1,6 @@
 import { Restaurant } from "@/types/restaurant";
-import { FlatList, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
+import Animated, { FadeInUp } from "react-native-reanimated";
 import RestaurantItem from "./restaurantItem";
 
 type Props = {
@@ -7,16 +8,22 @@ type Props = {
 };
 
 export default function RestaurantsList({ restaurants }: Props) {
-  const renderItem = ({ item }: { item: Restaurant }) => (
-    <RestaurantItem restaurant={item} />
-  );
+  const renderItem = ({ item }: { item: Restaurant; index: number }) => {
+    return (
+      <Animated.View entering={FadeInUp.duration(400)}>
+        <RestaurantItem restaurant={item} />
+      </Animated.View>
+    );
+  };
 
   return (
-    <FlatList
+    <Animated.FlatList
       data={restaurants}
       keyExtractor={(item) => item.name}
       renderItem={renderItem}
       contentContainerStyle={styles.listContainer}
+      scrollEventThrottle={16}
+      showsVerticalScrollIndicator={false}
     />
   );
 }
