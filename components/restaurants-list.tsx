@@ -1,7 +1,7 @@
 import { Restaurant } from "@/types/restaurant";
 import { StyleSheet } from "react-native";
 import Animated, { FadeInUp } from "react-native-reanimated";
-import RestaurantItem from "./restaurantItem";
+import RestaurantItem from "./restaurant-item";
 
 type Props = {
   restaurants: Restaurant[];

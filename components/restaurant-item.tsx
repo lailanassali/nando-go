@@ -1,5 +1,5 @@
 import { Restaurant } from "@/types/restaurant";
-import { getAddress } from "@/utils/getAddress";
+import { getAddress } from "@/utils/get-address";
 import * as Haptics from "expo-haptics";
 import { useRouter } from "expo-router";
 import { useRef } from "react";
@@ -17,7 +17,7 @@ export default function RestaurantItem({ restaurant }: Props) {
   const handlePress = () => {
     Haptics.selectionAsync();
     router.push({
-      pathname: "/screens/nandosWebViewScreen",
+      pathname: "/screens/nandos-webview-screen",
       params: {
         url: restaurant.url,
         title: restaurant.name,
@@ -52,6 +52,7 @@ export default function RestaurantItem({ restaurant }: Props) {
             elevation: pressed ? 6 : 2,
           },
         ]}
+        testID="restaurant-item"
       >
         <Card mode="contained" style={styles.card}>
           <List.Item

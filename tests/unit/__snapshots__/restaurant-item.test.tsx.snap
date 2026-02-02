@@ -51,6 +51,7 @@ exports[`Given I am on the restaurant screen matches snapshot 1`] = `
         false,
       ]
     }
+    testID="restaurant-item"
   >
     <View
       collapsable={false}

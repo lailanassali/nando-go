@@ -1,4 +1,4 @@
-import { isValidRestaurant } from "@/utils/isValidRestaurant";
+import { isValidRestaurant } from "@/utils/is-valid-restaurant";
 import { useEffect, useState } from "react";
 import { ApiResponse, Restaurant } from "../types/restaurant";
 

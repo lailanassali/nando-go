@@ -1,18 +1,19 @@
 import { Image } from "expo-image";
 import { StyleSheet, View } from "react-native";
 
-import RestaurantsList from "@/components/restaurantsList";
+import RestaurantsList from "@/components/restaurants-list";
 import { APP_VERSION, HEADER_HEIGHT } from "@/constants";
 import { useRestaurants } from "@/hooks/use-restaurants";
 import { Text } from "react-native-paper";
 
-export default function HomeScreen() {
+export default function RestaurantScreen() {
   const { restaurants } = useRestaurants();
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Image
+          contentFit="cover"
           source={require("@/assets/images/header-image.png")}
           style={styles.image}
         />
@@ -44,7 +45,6 @@ const styles = StyleSheet.create({
   },
   image: {
     ...StyleSheet.absoluteFillObject,
-    resizeMode: "cover",
   },
   overlay: {
     ...StyleSheet.absoluteFillObject,

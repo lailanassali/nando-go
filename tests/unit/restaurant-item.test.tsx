@@ -1,7 +1,7 @@
-import RestaurantItem from "@/components/restaurantItem";
+import { mockRestaurant } from "@/__mocks__/mockRestaurant";
+import RestaurantItem from "@/components/restaurant-item";
 import { useRestaurants } from "@/hooks/use-restaurants";
-import { Restaurant } from "@/types/restaurant";
-import { getAddress } from "@/utils/getAddress";
+import { getAddress } from "@/utils/get-address";
 import {
     fireEvent,
     render,
@@ -20,18 +20,6 @@ jest.mock("expo-router", () => ({
 jest.mock("expo-haptics", () => ({
   selectionAsync: jest.fn(),
 }));
-
-const mockRestaurant: Restaurant = {
-  name: "Nandos Soho",
-  url: "https://www.nandos.co.uk",
-  geo: {
-    address: {
-      streetAddress: "123 Test St",
-      addressLocality: "London",
-      postalCode: "W1",
-    },
-  },
-};
 
 describe("Given I am on the restaurant screen", () => {
   it("Then I should see the restaurant name", () => {
