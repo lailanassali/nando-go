@@ -1,9 +1,6 @@
 import { mockRestaurant } from "@/__mocks__/mockRestaurant";
 import RestaurantScreen from "@/app/(tabs)";
-import RestaurantItem from "@/components/restaurant-item";
-import { fireEvent, render, waitFor } from "@testing-library/react-native";
-import * as Haptics from "expo-haptics";
-import { useRouter } from "expo-router";
+import { render, waitFor } from "@testing-library/react-native";
 
 global.fetch = jest.fn() as jest.Mock;
 
@@ -17,20 +14,6 @@ jest.mock("expo-router", () => ({
 }));
 
 describe("RestaurantScreen", () => {
-  it("navigates and triggers haptics when pressed", () => {
-    const mockPush = jest.fn();
-    (useRouter as jest.Mock).mockReturnValue({ push: mockPush });
-
-    const { getByTestId } = render(
-      <RestaurantItem restaurant={mockRestaurant} />,
-    );
-
-    fireEvent.press(getByTestId("restaurant-item"));
-
-    expect(mockPush).toHaveBeenCalled();
-    expect(Haptics.selectionAsync).toHaveBeenCalled();
-  });
-
   it("shows the empty state when restaurants have missing fields", async () => {
     const incomplete = { ...mockRestaurant, geo: undefined };
     (fetch as jest.Mock).mockResolvedValueOnce({

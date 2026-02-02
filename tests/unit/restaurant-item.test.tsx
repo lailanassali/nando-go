@@ -3,10 +3,10 @@ import RestaurantItem from "@/components/restaurant-item";
 import { useRestaurants } from "@/hooks/use-restaurants";
 import { getAddress } from "@/utils/get-address";
 import {
-    fireEvent,
-    render,
-    renderHook,
-    waitFor,
+  fireEvent,
+  render,
+  renderHook,
+  waitFor,
 } from "@testing-library/react-native";
 import * as Haptics from "expo-haptics";
 import { useRouter } from "expo-router";
@@ -76,6 +76,19 @@ describe("Given I am on the restaurant screen", () => {
     await waitFor(() => {
       expect(result.current.restaurants).toEqual([valid]);
     });
+  });
+  it("navigates and triggers haptics when pressed", () => {
+    const mockPush = jest.fn();
+    (useRouter as jest.Mock).mockReturnValue({ push: mockPush });
+
+    const { getByTestId } = render(
+      <RestaurantItem restaurant={mockRestaurant} />,
+    );
+
+    fireEvent.press(getByTestId("restaurant-item"));
+
+    expect(mockPush).toHaveBeenCalled();
+    expect(Haptics.selectionAsync).toHaveBeenCalled();
   });
   it("matches snapshot", () => {
     const tree = render(
