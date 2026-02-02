@@ -7,7 +7,7 @@ import { useRestaurants } from "@/hooks/use-restaurants";
 import { Text } from "react-native-paper";
 
 export default function RestaurantScreen() {
-  const { restaurants } = useRestaurants();
+  const { restaurants, isLoading } = useRestaurants();
 
   return (
     <View style={styles.container}>
@@ -22,7 +22,16 @@ export default function RestaurantScreen() {
           <Text style={styles.appVersion}>App version: {APP_VERSION}</Text>
         </View>
       </View>
-      {restaurants && restaurants.length > 0 ? (
+
+      {isLoading ? (
+        <View style={styles.loadingOverlay} testID="loading-spinner">
+          <Image
+            source={require("@/assets/images/nandos-spinner.gif")}
+            style={styles.loadingGif}
+            contentFit="contain"
+          />
+        </View>
+      ) : restaurants && restaurants.length > 0 ? (
         <RestaurantsList restaurants={restaurants} />
       ) : (
         <View style={styles.emptyContainer}>
@@ -74,5 +83,22 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "#8B0000",
     fontWeight: "700",
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5F5F5",
+  },
+  loadingGif: {
+    width: 120,
+    height: 120,
+  },
+  loadingOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5F5F5",
+    zIndex: 999,
   },
 });

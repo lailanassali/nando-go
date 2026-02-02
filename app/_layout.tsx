@@ -25,7 +25,7 @@ export default function RootLayout() {
   const [logoScale] = useState(new Animated.Value(1));
   const [logoOpacity] = useState(new Animated.Value(1));
   const [contentFade] = useState(new Animated.Value(0));
-  const [splashFade] = useState(new Animated.Value(1)); // ⭐ fade out whole splash
+  const [splashFade] = useState(new Animated.Value(1));
 
   const [fontsLoaded] = useFonts({
     "Nandos-Regular": require("../assets/fonts/Nandos-Regular.ttf"),
@@ -87,7 +87,6 @@ export default function RootLayout() {
 
   return (
     <>
-      {/* Splash Layer */}
       <Animated.View style={[styles.splashContainer, { opacity: splashFade }]}>
         <Animated.Image
           source={require("../assets/images/nandos-logo.png")}
@@ -101,7 +100,6 @@ export default function RootLayout() {
         />
       </Animated.View>
 
-      {/* App Content */}
       <Animated.View style={{ flex: 1, opacity: contentFade }}>
         <ThemeProvider
           value={colorScheme === "dark" ? DarkTheme : DefaultTheme}
