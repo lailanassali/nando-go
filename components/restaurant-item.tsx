@@ -63,6 +63,7 @@ export default function RestaurantItem({ restaurant }: Props) {
                 {getAddress(restaurant.geo.address)}
               </Text>
             )}
+            testID="restaurant-item"
             left={(props) => (
               <List.Image
                 {...props}

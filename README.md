@@ -109,18 +109,20 @@ Run tests:
 
 npm test
 
-## End-to-end testing (Maestro)
+## End-to-end testing (Maestro) UI testing
 
 Maestro flows live in:
 
 maestro/  
- 01_empty_state.yaml  
- 02_success_state.yaml  
- 03_navigation.yaml
+ restaurant_list_flow.yaml
 
-Run all Maestro tests:
+Run Maestro tests:
 
 maestro test maestro
+
+See video here:
+
+## Run using Maestro UI automated testing
 
 ## Navigation
 
