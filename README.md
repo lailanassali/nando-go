@@ -124,6 +124,8 @@ See video here:
 
 ## Run using Maestro UI automated testing
 
+Docs: https://maestro.mobile.dev
+
 ## Navigation
 
 The app uses **Expo Router**:
