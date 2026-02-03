@@ -87,7 +87,10 @@ export default function RootLayout() {
 
   return (
     <>
-      <Animated.View style={[styles.splashContainer, { opacity: splashFade }]}>
+      <Animated.View
+        pointerEvents="none"
+        style={[styles.splashContainer, { opacity: splashFade }]}
+      >
         <Animated.Image
           source={require("../assets/images/nandos-logo.png")}
           style={{

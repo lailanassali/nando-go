@@ -46,16 +46,12 @@ export default function RestaurantItem({ restaurant }: Props) {
         onPressIn={onPressIn}
         onPressOut={onPressOut}
         android_ripple={{ color: "#eee" }}
-        style={({ pressed }) => [
-          styles.pressable,
-          pressed && {
-            elevation: pressed ? 6 : 2,
-          },
-        ]}
+        style={styles.pressable}
         testID="restaurant-item"
       >
         <Card mode="contained" style={styles.card}>
           <List.Item
+            rippleColor={"transparent"}
             titleStyle={styles.listTitle}
             title={restaurant.name}
             description={() => (
@@ -63,7 +59,6 @@ export default function RestaurantItem({ restaurant }: Props) {
                 {getAddress(restaurant.geo.address)}
               </Text>
             )}
-            testID="restaurant-item"
             left={(props) => (
               <List.Image
                 {...props}

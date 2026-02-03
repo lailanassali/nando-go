@@ -44,12 +44,9 @@ exports[`Given I am on the restaurant screen matches snapshot 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      [
-        {
-          "paddingVertical": 5,
-        },
-        false,
-      ]
+      {
+        "paddingVertical": 5,
+      }
     }
     testID="restaurant-item"
   >

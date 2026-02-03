@@ -1,15 +1,10 @@
-appId: com.anonymous.nando-go
+appId: com.anonymous.nandogo
 ---
 - launchApp
 
 - assertVisible: "Nandos\nRestaurants"
 - assertVisible: "App version: 1.0.0"
-- assertVisible:
-    id: "restaurant-item-content"
-    index: 0
 - scroll
 - tapOn:
-    id: "restaurant-item-content"
-    index: 4
-- scroll
+    id: "restaurant-item"
 - tapOn: Back
