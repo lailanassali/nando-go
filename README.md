@@ -114,11 +114,14 @@ npm test
 Maestro flows live in:
 
 maestro/  
- restaurant_list_flow.yaml
+ restaurant_list_flow_ios.yaml
+restaurant_list_flow_android.yaml
 
-Run Maestro tests:
+Run Maestro tests (platform specific) commands:
 
-maestro test maestro
+maestro test maestro/restaurant_list_flow_ios.yaml
+
+maestro test maestro/restaurant_list_flow_android.yaml
 
 See video here:
 

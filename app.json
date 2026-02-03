@@ -20,7 +20,7 @@
         "contentFit": "contain",
         "backgroundColor": "#ffffff"
       },
-      "bundleIdentifier": "com.anonymous.nando-go"
+      "bundleIdentifier": "com.anonymous.nandogo"
     },
     "android": {
       "splash": {

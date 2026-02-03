@@ -4,7 +4,10 @@ appId: com.anonymous.nandogo
 
 - assertVisible: "Nandos\nRestaurants"
 - assertVisible: "App version: 1.0.0"
+
 - scroll
+
 - tapOn:
     id: "restaurant-item"
-- tapOn: Back
+
+- tapOn: "Navigate up"
