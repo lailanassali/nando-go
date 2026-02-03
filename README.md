@@ -105,6 +105,10 @@ Located in **tests**/integration/:
 - Shows empty state when restaurants have missing fields
 - Navigation + haptics behaviour tested at the RestaurantItem level
 
+All tests passing:
+
+<img width="415" height="234" alt="Screenshot 2026-02-03 at 13 45 00" src="https://github.com/user-attachments/assets/afcc01e8-f04d-44ff-8a92-aff576a55bdb" />
+
 Run tests:
 
 npm test
@@ -122,8 +126,6 @@ Run Maestro tests (platform specific) commands:
 maestro test maestro/restaurant_list_flow_ios.yaml
 
 maestro test maestro/restaurant_list_flow_android.yaml
-
-See video here:
 
 ## Run using Maestro UI automated testing
 
